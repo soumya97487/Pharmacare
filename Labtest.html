@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab Test Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+     <!-- Top Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="/index.html">
+        <img src="images/logo.png" alt="Logo" class="img-fluid w-50">
+      </a>
+
+      <!-- Advertisement in the middle -->
+      <div class="d-none d-lg-block mx-auto">
+        <span class="navbar-text discount-text text-dark px-1 py-1 fs-6 rounded">
+          20% off on all medicines &amp; medical equipment, and 25% off on all Tests
+        </span>
+      </div>
+
+      <!-- Navbar Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar"
+        aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Right-side icons -->
+      <div class="collapse navbar-collapse" id="topNavbar">
+        <ul class="navbar-nav ms-auto">
+          <!-- Account Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" 
+               href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              <i class="bi bi-person fs-3 me-1"></i> Account
+            </a>
+            <!-- Dropdown menu with id for later updates -->
+            <ul class="dropdown-menu dropdown-menu-end" id="accountDropdownMenu" aria-labelledby="accountDropdown">
+              <li>
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Wishlist -->
+          <li class="nav-item">
+            <a class="nav-link px-5" href="#">
+              <i class="bi bi-heart fs-3"></i> Wishlist
+            </a>
+          </li>
+          <!-- Cart -->
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">
+              <i class="bi bi-cart fs-3"></i> Cart
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bottom Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavbar"
+        aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bottomNavbar">
+        <ul class="navbar-nav mx-auto gap-5">
+          <li class="nav-item">
+            <a class="nav-link active fs-4" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/medicne.html">Medicines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/Labtest.html">Lab Tests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/contact.html">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Content: All Tests in One Page -->
+  <div class="container my-4">
+    <h2 class="mb-4">Available Blood Tests</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Card for Complete Blood Count (CBC) -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Complete Blood Count (CBC)</h5>
+            <p class="card-text">$50</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal1">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card for Lipid Profile -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Lipid Profile</h5>
+            <p class="card-text">$70</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal2">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card for Blood Sugar Test -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Blood Sugar Test</h5>
+            <p class="card-text">$40</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal3">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals for Test Details -->
+  <!-- Modal for Complete Blood Count (CBC) -->
+  <div class="modal fade" id="testModal1" tabindex="-1" aria-labelledby="testModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="testModalLabel1">Complete Blood Count (CBC)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Details about the CBC test. It includes evaluation of red blood cells, white blood cells, and platelets. It is essential for diagnosing various conditions.</p>
+          <p><strong>Price:</strong> $50</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" onclick="bookTest()">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Lipid Profile -->
+  <div class="modal fade" id="testModal2" tabindex="-1" aria-labelledby="testModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="testModalLabel2">Lipid Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Details about the Lipid Profile test. It measures cholesterol levels, including HDL, LDL, and triglycerides, to assess heart health.</p>
+          <p><strong>Price:</strong> $70</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" onclick="bookTest()">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Blood Sugar Test -->
+  <div class="modal fade" id="testModal3" tabindex="-1" aria-labelledby="testModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="testModalLabel3">Blood Sugar Test</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Details about the Blood Sugar Test. It helps monitor glucose levels, which is crucial for managing diabetes and metabolic conditions.</p>
+          <p><strong>Price:</strong> $40</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" onclick="bookTest()">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="loginUsername" class="form-label">Username</label>
+              <input type="text" class="form-control" id="loginUsername" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+        </div>
+        <div class="modal-body">
+          <form id="signupForm">
+            <div class="mb-3">
+              <label for="signupName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="signupName" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="signupEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupUsername" class="form-label">Username</label>
+              <input type="text" class="form-control" id="signupUsername" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="signupPassword" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="signupConfirmPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+            <div class="mt-3 text-center">
+              <button type="button" class="btn btn-danger w-100">Sign in with Google</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle CDN and Custom JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Account.js"></script>
+  <script>
+    function bookTest() {
+      alert("Your test is booked.");
+    }
+  </script>
+</body>
+</html>
